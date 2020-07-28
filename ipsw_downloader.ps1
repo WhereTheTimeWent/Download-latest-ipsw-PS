@@ -86,6 +86,7 @@ foreach($Device in $Devices) {
 					} else {
 						# File is faulty, let's delete it
 						Write-Host ("Deleting file " + $Filename + " because hashes don't match...") -ForegroundColor "Red"
+						Remove-Item $Filename
 					}
 				}
 			} else {
